@@ -13,6 +13,7 @@ function App() {
   function createBossElements()
   {
     let boss_data_temp=[...boss_data];
+    boss_data_temp.sort((a,b)=>a.Average-b.Average);
     const boss_elements_temp=boss_data_temp.map(boss=><BossElement key={boss.ID} boss={boss}></BossElement>);
     setupBossElements(boss_elements_temp);
   }
